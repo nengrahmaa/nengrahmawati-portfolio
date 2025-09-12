@@ -1,0 +1,40 @@
+{
+  "header": {
+    "home": "Home",
+    "project": "Projects",
+    "contact": "Contact",
+    "about": "About",
+    "sertif" :"certification"
+  },
+  "roles": {
+    "juniorWebDev": "Web Developer",
+    "javaDev": "Java Developer",
+    "reactDev": "React Developer",
+    "fullStackDev": "Full-Stack Developer"
+  },
+  "home": {
+    "hello": "Hello!",
+    "im": "I'm",
+    "a": "a Junior",
+    "description": "Experienced in developing web applications and REST APIs with React, Java, Spring Boot, and MySQL. Focused on clean code, API integration, and responsive user-centered design, with strong collaboration in Agile/Scrum environments.",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "A brief insight into who I am, my journey, and expertise.",
+    "learnMore": "Learn More"
+  },
+  "project": {
+    "title": "My Projects",
+    "description": "A collection of my projects that demonstrates my experience and expertise in technology.",
+    "view": "View Projects"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Feel free to contact me if you have any questions or just want to say hi."
+  },
+  "alt": {
+    "profile": "Profile Picture of Neng Rahmawati"
+  }
+}

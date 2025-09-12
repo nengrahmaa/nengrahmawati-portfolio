@@ -1,0 +1,40 @@
+{
+    "header": {
+        "home": "Beranda",
+        "project": "Proyek",
+        "contact": "Kontak",
+        "about": "Tentang",
+        "sertif": "Sertifikat"
+    },
+    "roles": {
+        "juniorWebDev": "Web Developer",
+        "javaDev": "Java Developer",
+        "reactDev": "React Developer",
+        "fullStackDev": "Full-Stack Developer"
+    },
+    "home": {
+        "hello": "Halo!",
+        "im": "Saya",
+        "a": "seorang Junior",
+        "description": "Berpengalaman dalam mengembangkan aplikasi web dan REST API dengan React, Java, Spring Boot, dan MySQL. Berfokus pada kode yang bersih, integrasi API, dan desain responsif yang berpusat pada pengguna, dengan kolaborasi yang kuat dalam lingkungan Agile/Scrum.",
+        "downloadCV": "Unduh CV",
+        "contactMe": "Hubungi Saya"
+    },
+    "about": {
+        "title": "Tentang Saya",
+        "description": "Sekilas tentang siapa saya, perjalanan, dan keahlian saya.",
+        "learnMore": "Pelajari Lebih Lanjut"
+    },
+    "project": {
+        "title": "Proyek Saya",
+        "description": "Kumpulan proyek saya yang menunjukkan pengalaman dan keahlian saya di bidang teknologi.",
+        "view": "Lihat Proyek"
+    },
+    "contact": {
+        "title": "Hubungi Saya",
+        "subtitle": "Jangan ragu untuk menghubungi saya jika Anda memiliki pertanyaan atau sekadar ingin menyapa."
+    },
+    "alt": {
+        "profile": "Foto Profil Neng Rahmawati"
+    }
+}
