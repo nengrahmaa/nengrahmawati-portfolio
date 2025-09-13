@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Github, Instagram, Linkedin} from "lucide-react";
+import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Sidebar from "../component/sidebar";
 
@@ -77,7 +77,7 @@ export default function Home() {
       {isDesktop && <Sidebar />}
 
       {/* HOME SECTION */}
-<section
+      <section
         ref={(el) => (sectionsRef.current[0] = el)}
         id="home"
         className="min-h-screen bg-gray-200 flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-8 py-18 snap-start"
@@ -168,12 +168,19 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full md:w-1/2 relative"
           >
+            {/* Mobile & Tablet */}
             <img
-              src="photo-hero.jpg"
+              src="photo-grid.png"
               alt={t("alt.projects")}
-              className="w-full h-[50vh] md:h-[70vh] object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition duration-500"
+              className="w-full h-[50vh] object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition duration-500 lg:hidden"
             />
 
+            {/* Laptop & Desktop */}
+            <img
+              src="photo-grid2.png"
+              alt={t("alt.projects")}
+              className="w-full h-[70vh] object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition duration-500 hidden lg:block"
+            />
             {/* Judul di dalam gambar (hanya untuk mobile) */}
             <motion.h2
               initial={{ x: -60, opacity: 0 }}
