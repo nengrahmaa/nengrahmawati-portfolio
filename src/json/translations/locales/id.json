@@ -1,40 +1,202 @@
 {
-    "header": {
-        "home": "Beranda",
-        "project": "Proyek",
-        "contact": "Kontak",
-        "about": "Tentang",
-        "sertif": "Sertifikat"
-    },
-    "roles": {
-        "juniorWebDev": "Web Developer",
-        "javaDev": "Java Developer",
-        "reactDev": "React Developer",
-        "fullStackDev": "Full-Stack Developer"
-    },
-    "home": {
-        "hello": "Halo!",
-        "im": "Saya",
-        "a": "seorang Junior",
-        "description": "Berpengalaman dalam mengembangkan aplikasi web dan REST API dengan React, Java, Spring Boot, dan MySQL. Berfokus pada kode yang bersih, integrasi API, dan desain responsif yang berpusat pada pengguna, dengan kolaborasi yang kuat dalam lingkungan Agile/Scrum.",
-        "downloadCV": "Unduh CV",
-        "contactMe": "Hubungi Saya"
-    },
-    "about": {
-        "title": "Tentang Saya",
-        "description": "Sekilas tentang siapa saya, perjalanan, dan keahlian saya.",
-        "learnMore": "Pelajari Lebih Lanjut"
-    },
-    "project": {
-        "title": "Proyek Saya",
-        "description": "Kumpulan proyek saya yang menunjukkan pengalaman dan keahlian saya di bidang teknologi.",
-        "view": "Lihat Proyek"
-    },
-    "contact": {
-        "title": "Hubungi Saya",
-        "subtitle": "Jangan ragu untuk menghubungi saya jika Anda memiliki pertanyaan atau sekadar ingin menyapa."
-    },
-    "alt": {
-        "profile": "Foto Profil Neng Rahmawati"
-    }
+  "header": {
+    "home": "Beranda",
+    "project": "Proyek",
+    "contact": "Kontak",
+    "about": "Tentang",
+    "sertif": "Sertifikat"
+  },
+  "roles": {
+    "juniorWebDev": "Web Developer",
+    "javaDev": "Java Developer",
+    "reactDev": "React Developer",
+    "fullStackDev": "Full-Stack Developer"
+  },
+  "home": {
+    "hello": "Halo!",
+    "im": "Saya",
+    "a": "seorang Junior",
+    "description": "Berpengalaman dalam mengembangkan aplikasi web dan REST API dengan React, Java, Spring Boot, dan MySQL. Berfokus pada kode yang bersih, integrasi API, dan desain responsif yang berpusat pada pengguna, dengan kolaborasi yang kuat dalam lingkungan Agile/Scrum.",
+    "downloadCV": "Unduh CV",
+    "contactMe": "Hubungi Saya"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description": "Sekilas tentang siapa saya, perjalanan, dan keahlian saya.",
+    "learnMore": "Pelajari Lebih Lanjut",
+    "who": "Siapa Saya?",
+    "me": "Saya Neng Rahmawati, mahasiswa Manajemen Informatika Universitas Nasional PASIM. Sebagai penerima Beasiswa PUB, saya telah menjalani dua tahun pelatihan intensif yang membangun keterampilan teknis yang kuat di bidang Java, React, manajemen basis data, dan REST API. Berpengalaman dalam proyek tim, saya berfokus pada pengembangan aplikasi yang ramah pengguna dan integrasi API yang efisien. Saya cepat belajar, kolaboratif, dan bersemangat dalam memberikan solusi teknis yang berkualitas. Saya juga individu yang bertanggung jawab yang selalu siap untuk terus belajar dan berkembang, memastikan bahwa setiap tugas yang saya ambil diselesaikan dengan komitmen, keandalan, dan dorongan kuat untuk berkontribusi secara efektif kepada tim atau proyek mana pun."
+  },
+  "certificate": {
+    "title": "Sertifikat",
+    "description": "Setiap sertifikat merupakan langkah kecil dalam perjalanan belajar dan berkembang saya yang lebih besar. Ini adalah kumpulan pencapaian yang telah saya kumpulkan selama 2 tahun terakhir.",
+    "seeDetails": "Lihat Detail"
+  },
+  "project": {
+    "title": "Proyek Saya",
+    "description": "Kumpulan proyek saya yang menunjukkan pengalaman dan keahlian saya di bidang teknologi.",
+    "view": "Lihat Proyek"
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "subtitle": "Jangan ragu untuk menghubungi saya jika Anda memiliki pertanyaan atau sekadar ingin menyapa."
+  },
+  "alt": {
+    "profile": "Foto Profil Neng Rahmawati"
+  },
+  "skills": {
+    "title": "Keterampilan Teknologi"
+  },
+  "education": {
+    "title": "Pendidikan",
+    "start": "Mulai",
+    "end": "Selesai",
+    "location": "Lokasi",
+    "timeline": [
+      {
+        "startDate": "Sep 2023",
+        "endDate": "Sep 2025 (Perkiraan)",
+        "location": "Bandung, Indonesia",
+        "title": "Diploma Manajemen Informatika",
+        "institution": "Universitas Nasional PASIM",
+        "type": "Pendidikan Formal",
+        "description": [
+          "IPK: 3.85/4.00",
+          "Penerima Beasiswa PUB, mengikuti program intensif selama 2 tahun.",
+          "Mengikuti pelatihan dari Logika & Algoritma, hingga Fundamental dan Lanjutan pemrograman, masing-masing terdiri dari 16 pertemuan.",
+          "Mengerjakan proyek pengembangan aplikasi setiap kurang lebih 4 bulan sekali.",
+          "Berpartisipasi aktif dalam proyek tim untuk mengembangkan aplikasi dan integrasi API yang user-friendly."
+        ]
+      },
+      {
+        "startDate": "Jul 2020",
+        "endDate": "Jun 2023",
+        "location": "Purwakarta, Indonesia",
+        "title": "Ilmu Pengetahuan Alam",
+        "institution": "SMA Negeri 1 Sukatani",
+        "type": "Pendidikan Formal",
+        "description": [
+          "Nilai rata-rata akhir: 91.45",
+          "Ranking paralel ke 4 dari 160 siswa IPA",
+          "Menyelesaikan pendidikan SMA dengan fokus pada ilmu pengetahuan alam.",
+          "Anggota Klub Sains dan tim Olimpiade Fisika.",
+          "Mengorganisir pameran sains tingkat sekolah."
+        ]
+      }
+    ]
+  },
+  "training": {
+    "title": "Pelatihan & Kursus",
+    "start": "Mulai",
+    "end": "Selesai",
+    "location": "Lokasi",
+    "timeline": [
+      {
+        "startDate": "9 Mei 2025",
+        "endDate": "2 Sep 2025",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Fundamental Front-End Programming (React)",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari dasar React JS untuk front-end development.",
+          "Membuat aplikasi web interaktif menggunakan React."
+        ]
+      },
+      {
+        "startDate": "15 Des 2024",
+        "endDate": "26 Apr 2025",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Advanced Back-End Programming (Java)",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari konsep back-end lanjutan seperti REST API dan MVC.",
+          "Membangun aplikasi back-end yang lebih kompleks dengan Java.",
+          "Melakukan integrasi antara back-end dan database"
+        ]
+      },
+      {
+        "startDate": "6 Des 2024",
+        "endDate": "18 Des 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan GitHub",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari version control menggunakan Git dan GitHub.",
+          "Berlatih kolaborasi tim melalui repository GitHub.",
+          "Mengelola branch, merge, dan pull request dalam proyek tim."
+        ]
+      },
+      {
+        "startDate": "14 Agt 2024",
+        "endDate": "6 Des 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Fundamental Back-End Programming (Java)",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari dasar-dasar pemrograman Java untuk back-end.",
+          "Mempelajari konsep Pemrograman Berorientasi Objek (OOP) seperti class, objek, enkapsulasi, pewarisan, dan polymorphism.",
+          "Mengintegrasikan database dengan aplikasi Java."
+        ]
+      },
+      {
+        "startDate": "21 Mei 2024",
+        "endDate": "26 Jul 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Web Programming (HTML, CSS, JavaScript)",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari dasar-dasar HTML, CSS, dan JavaScript.",
+          "Membuat website interaktif sederhana.",
+          "Mengintegrasikan front-end dengan API eksternal sederhana untuk mengambil dan menampilkan data secara dinamis."
+        ]
+      },
+      {
+        "startDate": "20 Jan 2024",
+        "endDate": "20 Mei 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Database",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari konsep database relasional dan SQL.",
+          "Mengelola database menggunakan MySQL.",
+          "Mempelajari penggunaan JOIN, fungsi agregat, dan operasi dasar lainnya."
+        ]
+      },
+      {
+        "startDate": "20 Jan 2024",
+        "endDate": "20 Mei 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Struktur Data",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari konsep struktur data lanjutan seperti queue, tree, dan graph.",
+          "Mengimplementasikan struktur data dalam pemrograman C.",
+          "Melakukan proyek mini untuk memecahkan masalah algoritma kompleks."
+        ]
+      },
+      {
+        "startDate": "23 Sep 2023",
+        "endDate": "11 Jan 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Pelatihan Logika & Algoritma (C Programming Language)",
+        "institution": "Program Beasiswa PUB",
+        "type": "Pelatihan Intensif",
+        "description": [
+          "Mempelajari dasar logika pemrograman dan algoritma menggunakan bahasa C.",
+          "Memahami struktur dasar data, seperti array, serta membuat operasi CRUD (Create, Read, Update, Delete).",
+          "Mengimplementasikan dalam proyek akhir berupa aplikasi CRUD, dijalankan melalui console untuk praktik langsung pengolahan data."
+        ]
+      }
+    ]
+  },
+    "quote": "Kami tidak hanya membangun aplikasi — kami membangun pengalaman yang memberdayakan, menginspirasi, dan meningkatkan visi Anda."
+
+
 }

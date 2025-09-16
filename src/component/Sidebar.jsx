@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { Home, User, Folder, Mail } from "lucide-react";
+import { Home, User, Layers, FileBadge, Mail, Briefcase } from "lucide-react";
 
 export default function Sidebar() {
-    const links = [
-        { id: "home", icon: <Home />, href: "#home" },
-        { id: "about", icon: <User />, href: "#about" },
-        { id: "projects", icon: <Folder />, href: "#projects" },
-        { id: "contact", icon: <Mail />, href: "#contact" },
-    ];
+
+const links = [
+  { id: "home", icon: <Home />, href: "#home" },
+  { id: "about", icon: <User />, href: "#about" },
+  { id: "projects", icon: <Briefcase />, href: "#projects" },
+  { id: "certificate", icon: <FileBadge />, href: "#certificate" },
+  { id: "contact", icon: <Mail />, href: "#contact" },
+];
 
     const [activeSection, setActiveSection] = useState("home");
 

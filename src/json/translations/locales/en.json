@@ -4,7 +4,7 @@
     "project": "Projects",
     "contact": "Contact",
     "about": "About",
-    "sertif" :"certification"
+    "sertif": "Certificates"
   },
   "roles": {
     "juniorWebDev": "Web Developer",
@@ -23,7 +23,14 @@
   "about": {
     "title": "About Me",
     "description": "A brief insight into who I am, my journey, and expertise.",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "who": "Who Am I?",
+    "me": "I'm Neng Rahmawati, a student of Informatics Management at Universitas Nasional PASIM. As a PUB Scholarship recipient, I have undergone two years of intensive training that built strong technical skills in Java, React, database management, and REST API. Experienced in team projects, I focus on developing user-friendly applications and efficient API integration. I am a fast learner, collaborative, and passionate about delivering quality technical solutions. I am also a responsible individual who is always ready to keep learning and growing, ensuring that every task I take on is completed with commitment, reliability, and a strong drive to contribute effectively to any team or project."
+  },
+  "certificate": {
+    "title": "Certificates",
+    "description": "Each certificate is a small step in my bigger journey of learning and growing. This is a collection of achievements I've accumulated over the past 2 years.",
+    "seeDetails": "See Details"
   },
   "project": {
     "title": "My Projects",
@@ -36,5 +43,158 @@
   },
   "alt": {
     "profile": "Profile Picture of Neng Rahmawati"
-  }
+  },
+  "skills": {
+    "title": "Tech Skills"
+  },
+  "education": {
+    "title": "Education",
+    "start": "Start",
+    "end": "Complete",
+    "location": "Location",
+    "timeline": [
+      {
+        "startDate": "Sep 2023",
+        "endDate": "Sep 2025 (Estimated)",
+        "location": "Bandung, Indonesia",
+        "title": "Diploma in Informatics Management",
+        "institution": "PASIM National University",
+        "type": "Formal Education",
+        "description": [
+          "GPA: 3.85/4.00",
+          "PUB Scholarship recipient, participated in an intensive 2-year program.",
+          "Participated in training courses ranging from Logic & Algorithms, to Fundamental and Advanced Programming, each consisting of 16 sessions.",
+          "Worked on application development projects approximately every 4 months.",
+          "Actively participated in team projects to develop applications and User-friendly API integration."
+        ]
+      },
+      {
+        "startDate": "Jul 2020",
+        "endDate": "Jun 2023",
+        "location": "Purwakarta, Indonesia",
+        "title": "Natural Sciences",
+        "institution": "SMA Negeri 1 Sukatani",
+        "type": "Formal Education",
+        "description": [
+          "Grade point average: 91.45",
+          "Ranked 4th out of 160 science students",
+          "Completed high school with a focus on natural sciences.",
+          "Member of the Science Club and Physics Olympiad team.",
+          "Organized a school-level science fair."
+        ]
+      }
+    ]
+  },
+  "training": {
+    "title": "Training & Courses",
+    "start": "Start",
+    "end": "End",
+    "location": "Location",
+    "timeline": [
+      {
+        "startDate": "May 9, 2025",
+        "endDate": "Sep 2, 2025",
+        "location": "Bandung, Indonesia",
+        "title": "Fundamental Front-End Programming Training (React)",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Learned the basics of React JS for front-end development.",
+          "Built interactive web applications using React."
+        ]
+      },
+      {
+        "startDate": "Dec 15, 2024",
+        "endDate": "Apr 26, 2025",
+        "location": "Bandung, Indonesia",
+        "title": "Advanced Back-End Programming Training (Java)",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Studied advanced back-end concepts such as REST API and MVC.",
+          "Built more complex back-end applications using Java.",
+          "Integrated back-end with databases."
+        ]
+      },
+      {
+        "startDate": "Dec 6, 2024",
+        "endDate": "Dec 18, 2024",
+        "location": "Bandung, Indonesia",
+        "title": "GitHub Training",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Learned version control using Git and GitHub.",
+          "Practiced team collaboration through GitHub repositories.",
+          "Managed branches, merges, and pull requests in team projects."
+        ]
+      },
+      {
+        "startDate": "Aug 14, 2024",
+        "endDate": "Dec 6, 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Fundamental Back-End Programming Training (Java)",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Learned the basics of Java programming for back-end development.",
+          "Studied Object-Oriented Programming concepts including classes, objects, encapsulation, inheritance, and polymorphism.",
+          "Integrated database with Java applications."
+        ]
+      },
+      {
+        "startDate": "May 21, 2024",
+        "endDate": "Jul 26, 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Web Programming Training (HTML, CSS, JavaScript)",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Learned the basics of HTML, CSS, and JavaScript.",
+          "Built simple interactive websites.",
+          "Integrated front-end with simple external APIs to dynamically display data."
+        ]
+      },
+      {
+        "startDate": "Jan 20, 2024",
+        "endDate": "May 20, 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Database Training",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Studied relational database concepts and SQL.",
+          "Managed databases using MySQL.",
+          "Learned JOIN operations, aggregate functions, and basic database operations."
+        ]
+      },
+      {
+        "startDate": "Jan 20, 2024",
+        "endDate": "May 20, 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Data Structure Training",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Learned advanced data structure concepts such as queue, tree, and graph.",
+          "Implemented data structures in C programming.",
+          "Completed mini projects to solve complex algorithm problems."
+        ]
+      },
+      {
+        "startDate": "Sep 23, 2023",
+        "endDate": "Jan 11, 2024",
+        "location": "Bandung, Indonesia",
+        "title": "Logic & Algorithm Training (C Programming Language)",
+        "institution": "PUB Scholarship Program",
+        "type": "Intensive Training",
+        "description": [
+          "Learned basic programming logic and algorithms using C.",
+          "Understood fundamental data structures such as arrays and created CRUD operations (Create, Read, Update, Delete).",
+          "Implemented a final project using a console-based CRUD application for hands-on data management practice."
+        ]
+      }
+    ]
+  },
+  "quote": "We don't just build applications — we build experiences that empower, inspire, and elevate your vision."
 }

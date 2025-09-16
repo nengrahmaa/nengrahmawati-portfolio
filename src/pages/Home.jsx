@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Sidebar from "../component/sidebar";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -17,6 +18,20 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const sectionsRef = useRef([]);
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleDownload = (version) => {
+    const fileMap = {
+      id: "/cv-indo.pdf",
+      en: "/cv-english.pdf",
+    };
+    const link = document.createElement("a");
+    link.href = fileMap[version];
+    link.download = version === "id" ? "CV-Indo.pdf" : "CV-English.pdf";
+    link.click();
+    setShowMenu(false); // tutup menu setelah klik
+  };
 
   useEffect(() => {
     // Set initial state based on window width
@@ -70,6 +85,8 @@ export default function Home() {
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
   }, [isDesktop]);
+
+
 
   return (
     <div className="bg-gray-200 snap-y snap-mandatory h-screen overflow-y-auto lg:overflow-hidden">
@@ -139,16 +156,69 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-row sm:flex-row gap-4 mt-8 font-medium justify-center md:justify-start"
             >
-              <button className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition text-sm sm:text-base shadow-md">
+              <motion.button
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                onClick={() => setShowMenu(!showMenu)}
+                className="px-5 py-2 bg-gradient-to-r from-gray-800 via-gray-900 to-black 
+          text-gray-200 rounded-lg hover:brightness-110 hover:scale-105 hover:shadow-2xl hover:shadow-black/60
+          transition text-sm sm:text-base shadow-lg shadow-gray-700/40 
+          tracking-wide cursor-pointer"
+              >
                 {t("home.downloadCV")}
-              </button>
-              <button className="px-6 py-3 border border-gray-800 text-gray-800 rounded-md hover:bg-gray-100 transition text-sm sm:text-base">
-                {t("home.contactMe")}
-              </button>
+              </motion.button>
+
+              {/* Menu versi CV */}
+              <AnimatePresence>
+                {showMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute mt-8 w-38 bg-gray-500 text-gray-200 rounded-lg shadow-lg flex flex-col"
+                  >
+                    <button
+                      className="px-4 py-2 hover:bg-gray-700 rounded-t-lg text-left"
+                      onClick={() => handleDownload("id")}
+                    >
+                      CV Indonesia
+                    </button>
+                    <button
+                      className="px-4 py-2 hover:bg-gray-700 rounded-b-lg text-left"
+                      onClick={() => handleDownload("en")}
+                    >
+                      CV English
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <motion.button
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                className="px-5 py-2 border border-gray-800 text-gray-800
+               rounded-lg hover:brightness-110 hover:scale-103 hover:shadow-2xl hover:shadow-black/60
+              transition text-sm sm:text-base shadow-lg shadow-gray-700/40 
+              self-center md:self-start tracking-wide cursor-pointer"
+              >
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  className="w-full h-full block"
+                >
+
+                  {t("home.contactMe")}
+                </Link>
+              </motion.button>
             </motion.div>
           </div>
         </div>
       </section>
+      
       {/* ABOUT SECTION */}
       <motion.section
         ref={(el) => (sectionsRef.current[1] = el)}
@@ -215,19 +285,19 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="hidden md:block text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6"
+              className="hidden md:block text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6"
             >
               {t("about.title")}
               <motion.span
                 initial={{ width: 0, opacity: 0 }}
-                whileInView={{ width: "70px", opacity: 1 }}
+                whileInView={{ width: "90px", opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
                 className="block h-1 bg-gray-700 rounded mt-2"
               />
               <motion.span
                 initial={{ width: 0, opacity: 0 }}
-                whileInView={{ width: "90px", opacity: 1 }}
+                whileInView={{ width: "110px", opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
                 className="block h-1 bg-gray-400 rounded mt-2"
@@ -251,7 +321,10 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-              className="px-8 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-700 transition text-lg font-medium self-center md:self-start shadow-md"
+              className="px-5 py-2 bg-gradient-to-r from-gray-800 via-gray-900 to-black 
+              text-gray-200 rounded-full hover:brightness-110 hover:scale-103 hover:shadow-2xl hover:shadow-black/60
+              transition text-sm sm:text-base shadow-lg shadow-gray-700/40 
+              self-center md:self-start tracking-wide cursor-pointer"
             >
               {t("about.learnMore")}
             </motion.button>
@@ -296,17 +369,17 @@ export default function Home() {
               {t("project.title")}
               <motion.span
                 initial={{ width: 0, opacity: 0 }}
-                whileInView={{ width: "70px", opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-                className="block h-1 bg-gray-700 rounded mt-2 shadow"
-              />
-              <motion.span
-                initial={{ width: 0, opacity: 0 }}
                 whileInView={{ width: "90px", opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-                className="block h-1 bg-gray-400 rounded mt-2 shadow"
+                className="block h-1 bg-gray-700 rounded mt-2"
+              />
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "110px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-400 rounded mt-2"
               />
             </motion.h2>
           </motion.div>
@@ -319,7 +392,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="hidden md:block text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6"
+              className="hidden md:block text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6"
             >
               {t("project.title")}
               <motion.span
@@ -344,7 +417,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              className="text-gray-700 text-sm sm:text-base leading-relaxed text-center md:text-left mb-8 mt-6 md:mt-0"
+              className="text-gray-700 text-base sm:text-lg leading-relaxed text-center md:text-left mb-8 mt-6 md:mt-0"
             >
               {t("project.description")}
             </motion.p>
@@ -355,7 +428,10 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-              className="px-8 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-700 transition text-lg font-medium self-center md:self-start shadow-md"
+              className="px-5 py-2 bg-gradient-to-r from-gray-800 via-gray-900 to-black 
+              text-gray-200 rounded-full hover:brightness-110 hover:scale-103 hover:shadow-2xl hover:shadow-black/60
+              transition text-sm sm:text-base shadow-lg shadow-gray-700/40 
+              self-center md:self-start tracking-wide cursor-pointer"
             >
               {t("project.view")}
             </motion.button>
@@ -363,9 +439,114 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* CONTACT SECTION */}
+      {/* Certificate SECTION */}
       <motion.section
         ref={(el) => (sectionsRef.current[3] = el)}
+        id="certificate"
+        className="min-h-screen bg-gray-200 px-4 sm:px-6 md:px-8 py-12 flex flex-col items-center justify-center snap-start"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12">
+          {/* Gambar Project */}
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full md:w-1/2 relative"
+          >
+            <img
+              src="photo-hero.jpg"
+              alt={t("alt.certificate")}
+              className="w-full h-[50vh] md:h-[70vh] object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition duration-500"
+            />
+
+            {/* Judul di dalam gambar (hanya untuk mobile) */}
+            <motion.h2
+              initial={{ x: -60, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-white drop-shadow-lg z-10 text-left md:hidden"
+            >
+              {t("certificate.title")}
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "90px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-700 rounded mt-2"
+              />
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "110px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-400 rounded mt-2"
+              />
+            </motion.h2>
+          </motion.div>
+
+          <div className="w-full md:w-1/2 flex flex-col justify-center">
+            {/* Judul untuk tablet/laptop (di atas deskripsi) */}
+            <motion.h2
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="hidden md:block text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6"
+            >
+              {t("certificate.title")}
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "70px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-700 rounded mt-2"
+              />
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "90px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-400 rounded mt-2"
+              />
+            </motion.h2>
+
+            {/* Deskripsi */}
+            <motion.p
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              className="text-gray-700 text-base sm:text-lg leading-relaxed text-center md:text-left mb-8 mt-6 md:mt-0"
+            >
+              {t("certificate.description")}
+            </motion.p>
+
+            {/* Tombol */}
+            <motion.button
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              className="px-5 py-2 bg-gradient-to-r from-gray-800 via-gray-900 to-black 
+              text-gray-200 rounded-full hover:brightness-110 hover:scale-103 hover:shadow-2xl hover:shadow-black/60
+              transition text-sm sm:text-base shadow-lg shadow-gray-700/40 
+              self-center md:self-start tracking-wide cursor-pointer"
+            >
+              {t("certificate.seeDetails")}
+            </motion.button>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* CONTACT SECTION */}
+      <motion.section
+        ref={(el) => (sectionsRef.current[4] = el)}
         id="contact"
         className="min-h-screen bg-gray-200 px-4 sm:px-6 md:px-8 py-12 flex flex-col items-center justify-center snap-start"
         initial={{ opacity: 0 }}
@@ -398,23 +579,47 @@ export default function Home() {
               {t("contact.title")}
               <motion.span
                 initial={{ width: 0, opacity: 0 }}
-                whileInView={{ width: "70px", opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-                className="block h-1 bg-gray-700 rounded mt-2 shadow"
-              />
-              <motion.span
-                initial={{ width: 0, opacity: 0 }}
                 whileInView={{ width: "90px", opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-                className="block h-1 bg-gray-400 rounded mt-2 shadow"
+                className="block h-1 bg-gray-700 rounded mt-2"
+              />
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "110px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-400 rounded mt-2"
               />
             </motion.h2>
           </motion.div>
 
           {/* Bagian Konten Kontak */}
           <div className="w-full md:w-1/2 flex flex-col justify-center">
+            <motion.h2
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="hidden md:block text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6"
+            >
+              {t("contact.title")}
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "70px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-700 rounded mt-2"
+              />
+              <motion.span
+                initial={{ width: 0, opacity: 0 }}
+                whileInView={{ width: "90px", opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                className="block h-1 bg-gray-400 rounded mt-2"
+              />
+            </motion.h2>
+
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

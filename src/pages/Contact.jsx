@@ -1,92 +1,87 @@
 import { motion } from "framer-motion";
+import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Mail, Phone, MapPin } from "lucide-react";
+import Footer from "../component/footer";
+import BackToTop from "../component/BackToTop";
 
 export default function Contact() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full pt-24 pb-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        {/* Title */}
+    <div>
+      <motion.section
+        id="contact"
+        className="min-h-screen bg-gray-100 px-6 sm:px-12 md:px-20 py-16 flex flex-col items-center justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        {/* Judul */}
         <motion.h2
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-6 text-center"
+        >
+          {t("contact.title")}
+        </motion.h2>
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="w-24 h-1 bg-gray-700 rounded mb-8 mx-auto"
+        />
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-gray-700 text-base sm:text-lg md:text-xl max-w-3xl text-center"
         >
-          {t("contact.title", "Get In Touch")}
-        </motion.h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-12 text-sm sm:text-base">
-          {t(
-            "contact.subtitle",
-            "Feel free to contact me if you have any questions or just want to say hi."
-          )}
-        </p>
+          {t("contact.subtitle")}
+        </motion.p>
 
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <div className="flex items-center gap-4">
-              <Mail className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
-              <span className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
-                hello@example.com
-              </span>
-            </div>
-            <div className="flex items-center gap-4">
-              <Phone className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
-              <span className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
-                +62 812 3456 7890
-              </span>
-            </div>
-            <div className="flex items-center gap-4">
-              <MapPin className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
-              <span className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
-                Jakarta, Indonesia
-              </span>
-            </div>
-          </motion.div>
+        {/* Email */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-lg sm:text-xl font-medium text-gray-900 mt-8 text-center"
+        >
+          nengrahmawati061@gmail.com
+        </motion.p>
 
-          {/* Contact Form */}
-          <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 sm:p-8 flex flex-col gap-4"
-          >
-            <input
-              type="text"
-              placeholder={t("contact.name", "Your Name")}
-              className="w-full px-4 py-2 text-sm sm:text-base rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              required
-            />
-            <input
-              type="email"
-              placeholder={t("contact.email", "Your Email")}
-              className="w-full px-4 py-2 text-sm sm:text-base rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              required
-            />
-            <textarea
-              rows="4"
-              placeholder={t("contact.message", "Your Message")}
-              className="w-full px-4 py-2 text-sm sm:text-base rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              required
-            />
-            <button
-              type="submit"
-              className="w-full mt-2 bg-cyan-500 text-white py-2 rounded-lg text-sm sm:text-base font-semibold hover:bg-cyan-600 transition"
+        {/* Social Icons */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="flex flex-wrap justify-center gap-6 mt-10"
+        >
+          {[
+            { icon: Mail, href: "mailto:nengrahmawati061@gmail.com" },
+            { icon: Github, href: "https://github.com/nengrahmaa" },
+            { icon: Instagram, href: "https://instagram.com/username" },
+            { icon: Linkedin, href: "https://linkedin.com/in/neng-rahmawati-092586293/" },
+          ].map((item, i) => (
+            <motion.a
+              key={i}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-4 bg-white rounded-full shadow-lg hover:bg-gray-50 transition flex items-center justify-center"
             >
-              {t("contact.send", "Send Message")}
-            </button>
-          </motion.form>
-        </div>
-      </div>
-    </section>
+              <item.icon className="w-6 h-6 text-gray-800" />
+            </motion.a>
+          ))}
+        </motion.div>
+      </motion.section>
+      <BackToTop/>
+      <Footer />
+    </div>
   );
 }
