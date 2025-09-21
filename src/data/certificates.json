@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "certificates.frontendReact.title",
+    "issuer": "certificates.frontendReact.issuer",
+    "image": "/certificates/frontend-react.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "certificates.backendAdvancedJava.title",
+    "issuer": "certificates.backendAdvancedJava.issuer",
+    "image": "/certificates/backend-advanced-java.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "certificates.github.title",
+    "issuer": "certificates.github.issuer",
+    "image": "/certificates/github.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "certificates.backendFundamentalJava.title",
+    "issuer": "certificates.backendFundamentalJava.issuer",
+    "image": "/certificates/backend-fundamental-java.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "certificates.webProgramming.title",
+    "issuer": "certificates.webProgramming.issuer",
+    "image": "/certificates/web-programming.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "certificates.database.title",
+    "issuer": "certificates.database.issuer",
+    "image": "/certificates/database.jpeg"
+  },
+  {
+    "id": 7,
+    "title": "certificates.dataStructure.title",
+    "issuer": "certificates.dataStructure.issuer",
+    "image": "/certificates/data-structure.jpeg"
+  },
+  {
+    "id": 8,
+    "title": "certificates.logicCProgramming.title",
+    "issuer": "certificates.logicCProgramming.issuer",
+    "image": "/certificates/logic-c-programming.jpeg"
+  }
+]

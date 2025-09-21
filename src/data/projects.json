@@ -1,0 +1,68 @@
+[
+  {
+    "id": "proj-3",
+    "year": "Sep 2025",
+    "title_key": "projects.proj-3.title",
+    "description_key": "projects.proj-3.description",
+    "details_key": "projects.proj-3.details",
+    "techStack": ["React", "Tailwind CSS"],
+    "demoUrl": "https://trip-mate-project.vercel.app/",
+    "githubUrl": "https://github.com/nengrahmaa/TripMate.git",
+    "image": "/projects/trip-mate-project.png"
+  },
+  {
+    "id": "proj-4",
+    "year": "Mar - Apr 2025",
+    "title_key": "projects.proj-4.title",
+    "description_key": "projects.proj-4.description",
+    "details_key": "projects.proj-4.details",
+    "techStack": ["Java", "Spring Boot", "Spring Security", "JPA", "MySQL", "Swagger"],
+    "demoUrl": "",
+    "githubUrl": "#",
+    "image": "/projects/trip-mate-project.png"
+  },
+  {
+    "id": "proj-5",
+    "year": "Feb 2025",
+    "title_key": "projects.proj-5.title",
+    "description_key": "projects.proj-5.description",
+    "details_key": "projects.proj-5.details",
+    "techStack": ["Java", "Spring Boot", "JPA", "MySQL", "REST API", "Swagger"],
+    "demoUrl": "",
+    "githubUrl": "https://github.com/nengrahmaa/loan-management-api.git",
+    "image": "/projects/trip-mate-project.png"
+  },
+  {
+    "id": "proj-6",
+    "year": "Nov 2024",
+    "title_key": "projects.proj-6.title",
+    "description_key": "projects.proj-6.description",
+    "details_key": "projects.proj-6.details",
+    "techStack": ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap"],
+    "demoUrl": "",
+    "githubUrl": "",
+    "image": "/projects/trip-mate-project.png"
+  },
+  {
+    "id": "proj-7",
+    "year": "Jul 2024",
+    "title_key": "projects.proj-7.title",
+    "description_key": "projects.proj-7.description",
+    "details_key": "projects.proj-7.details",
+    "techStack": ["HTML5", "CSS3", "JavaScript", "NASA API"],
+    "demoUrl": "https://celestial-nexus-nasa-api-uas-web.vercel.app/",
+    "githubUrl": "https://github.com/nengrahmaa/celestial-nexus-nasa-api-uas.git",
+    "image": "/projects/trip-mate-project.png"
+  },
+    {
+    "id": "proj-8",
+    "year": "Jan 2024",
+    "title_key": "projects.proj-8.title",
+    "description_key": "projects.proj-8.description",
+    "details_key": "projects.proj-8.details",
+    "techStack": ["C"],
+    "demoUrl": "",
+    "githubUrl": "https://github.com/nengrahmaa/uas-c-sales-project.git",
+    "image": "/projects/trip-mate-project.png"
+  }
+]
