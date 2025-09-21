@@ -58,8 +58,8 @@ export default function Header() {
               {t("header.about")}
             </button>
             <button
-              onClick={() => navigate("/project")}
-              className={`cursor-pointer font-bold pb-1 ${isActive("/project")
+              onClick={() => navigate("/projects")}
+              className={`cursor-pointer font-bold pb-1 ${isActive("/projects")
                 ? "border-b-2 border-gray-500 text-gray-500"
                 : "hover:text-gray-600 dark:hover:text-gray-700"
                 }`}
@@ -68,7 +68,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => navigate("/certificate")}
-              className={`cursor-pointer font-bold pb-1 ${isActive("/certificates")
+              className={`cursor-pointer font-bold pb-1 ${isActive("/certificate")
                 ? "border-b-2 border-gray-500 text-gray-500"
                 : "hover:text-gray-600 dark:hover:text-gray-700"
                 }`}

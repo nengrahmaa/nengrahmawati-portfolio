@@ -196,5 +196,104 @@
       }
     ]
   },
-  "quote": "We don't just build applications — we build experiences that empower, inspire, and elevate your vision."
+  "quote": "We don't just build applications — we build experiences that empower, inspire, and elevate your vision.",
+  "certificates": {
+    "titlePage": "My Certificates",
+    "frontendReact": {
+      "title": "Fundamental Front-End Programming (React)",
+      "issuer": "PUB Scholarship Program"
+    },
+    "backendAdvancedJava": {
+      "title": "Advanced Back-End Programming (Java)",
+      "issuer": "PUB Scholarship Program"
+    },
+    "github": {
+      "title": "GitHub Training",
+      "issuer": "PUB Scholarship Program"
+    },
+    "backendFundamentalJava": {
+      "title": "Fundamental Back-End Programming (Java)",
+      "issuer": "PUB Scholarship Program"
+    },
+    "webProgramming": {
+      "title": "Web Programming (HTML, CSS, JavaScript)",
+      "issuer": "PUB Scholarship Program"
+    },
+    "database": {
+      "title": "Database Training",
+      "issuer": "PUB Scholarship Program"
+    },
+    "dataStructure": {
+      "title": "Data Structure Training",
+      "issuer": "PUB Scholarship Program"
+    },
+    "logicCProgramming": {
+      "title": "Logic & Algorithm (C Programming Language)",
+      "issuer": "PUB Scholarship Program"
+    }
+  },
+  "projects": {
+    "titlePage": "My Projects",
+    "proj-3": {
+      "title": "Trip Mate – Full-Stack Web Application",
+      "description": "A dynamic web application serving as proof of rapid mastery of React fundamentals. Designed as an intensive final project to transform theory into a functional product with comprehensive data management.",
+      "details": {
+        "0": "Demonstrated agile learning by translating theoretical concepts from React training into a real-world application, proving the ability to effectively adopt and apply new technologies in a short timeframe.",
+        "1": "Designed and executed a logical data architecture with full CRUD (Create, Read, Update, Delete) functionality, and implemented dynamic search and sorting features to create a user-centric data management experience.",
+        "2": "Optimized application state and component lifecycle management using React Hooks (useState, useEffect), resulting in a clean, efficient, and modern component architecture."
+      }
+    },
+    "proj-4": {
+      "title": "Loco Booking Management API – Collaborative Reservation System",
+      "description": "A robust and scalable REST API for a train reservation system, handling the core logic from booking to authentication. This project was the result of an intensive 40-day team collaboration with a focus on reliability and security.",
+      "details": {
+        "0": "Actively contributed to the team's project development lifecycle, from system architecture design and task delegation to code integration, ensuring effective collaboration and on-time project delivery.",
+        "1": "Took a key role in security implementation by designing and integrating Spring Security for role-based authentication and authorization, securing API endpoints from unauthorized access and ensuring data integrity.",
+        "2": "Enhanced system functionality by developing critical features like automated email notifications for booking confirmations and scheduled tasks (cron jobs) for background processes, demonstrating an understanding of automation and operational efficiency."
+      }
+    },
+    "proj-5": {
+      "title": "Loan Management API – End-to-End Financial Solution",
+      "description": "An independently developed REST API designed to handle the entire loan management lifecycle. This project demonstrates the ability to translate complex financial business requirements into a functional and structured API service in just 7 days.",
+      "details": {
+        "0": "Showcased high discipline, independent project management, and rapid execution capabilities by autonomously completing the API's development from concept to full implementation within one week.",
+        "1": "Built powerful API endpoints by translating complex financial business logic—including dynamic installment calculations, loan eligibility validation, and payment history tracking—into efficient code.",
+        "2": "Implemented comprehensive CRUD functionality as a solid and structured data foundation for customer, loan, and payment entities, ensuring data integrity and ease of management."
+      }
+    },
+    "proj-6": {
+      "title": "Bumi Ama – Full-Stack Reservation Solution with Access Control",
+      "description": "An end-to-end reservation solution developed in 15 days, covering both frontend and backend. The application is designed with a security architecture that strictly separates access rights between regular users and administrators.",
+      "details": {
+        "0": "Demonstrated full-stack capabilities by managing the entire development lifecycle, from user interface design to server-side logic and database management, in a fast-paced, result-oriented development environment.",
+        "1": "Designed and implemented an effective Role-Based Access Control (RBAC) system, where admins have full control over crucial data, to guarantee data security and provide a role-appropriate user experience."
+      }
+    },
+    "proj-7": {
+      "title": "Celestial Nexus – Astronomical Data Visualization",
+      "description": "A web portal that transforms raw scientific data from NASA into an engaging and educational visual experience. This project highlights skills in third-party API integration and the intuitive presentation of complex data.",
+      "details": {
+        "0": "Proactively studied technical documentation and orchestrated the integration with NASA's external API, showcasing rapid adaptation to new technologies and the ability to work with external data sources.",
+        "1": "Designed an interface that not only displays data but also tells a story, focusing on User Experience (UX) to ensure that complex astronomical information can be enjoyed and understood by a general audience."
+      }
+    },
+    "proj-8": {
+      "title": "Aroma POS – CLI-Based Cashier System in C",
+      "description": "An efficient and lightweight Point-of-Sale application built from the ground up in C. This project demonstrates a fundamental understanding of computer science, memory management, and high-performance application development without framework dependencies.",
+      "details": {
+        "0": "Demonstrated expertise in C by designing custom data structures (`structs`) and managing persistent data through file I/O operations, ensuring that transaction and inventory data is stored securely and can be retrieved.",
+        "1": "Built an efficient solution with a structured command-line interface, focusing on performance, minimal resource consumption, and a clear user interaction flow through careful input validation."
+      }
+    }
+  },
+  "projectDetail": {
+    "notFound": "Project not found",
+    "backButton": "Back to All Projects",
+    "techLabel": "Technology",
+    "yearLabel": "Year",
+    "linksLabel": "Links",
+    "demoLink": "Demo",
+    "repoLink": "Repository",
+    "descLabel": "Description"
+  }
 }

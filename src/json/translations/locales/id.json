@@ -196,7 +196,104 @@
       }
     ]
   },
-    "quote": "Kami tidak hanya membangun aplikasi — kami membangun pengalaman yang memberdayakan, menginspirasi, dan meningkatkan visi Anda."
-
-
+  "quote": "Kami tidak hanya membangun aplikasi — kami membangun pengalaman yang memberdayakan, menginspirasi, dan meningkatkan visi Anda.",
+  "certificates": {
+    "titlePage": "Sertifikat Saya",
+    "frontendReact": {
+      "title": "Pelatihan Fundamental Front-End Programming (React)",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "backendAdvancedJava": {
+      "title": "Pelatihan Advanced Back-End Programming (Java)",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "github": {
+      "title": "Pelatihan GitHub",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "backendFundamentalJava": {
+      "title": "Pelatihan Fundamental Back-End Programming (Java)",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "webProgramming": {
+      "title": "Pelatihan Web Programming (HTML, CSS, JavaScript)",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "database": {
+      "title": "Pelatihan Database",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "dataStructure": {
+      "title": "Pelatihan Struktur Data",
+      "issuer": "Program Beasiswa PUB"
+    },
+    "logicCProgramming": {
+      "title": "Pelatihan Logika & Algoritma (C Programming Language)",
+      "issuer": "Program Beasiswa PUB"
+    }
+  },
+  "projects": {
+    "titlePage": "Proyek Saya",
+    "proj-3": {
+      "title": "Trip Mate – Aplikasi Web Full-Stack",
+      "description": "Aplikasi web dinamis yang berfungsi sebagai bukti penguasaan cepat fundamental React. Dirancang sebagai proyek akhir intensif untuk mengubah teori menjadi produk fungsional dengan manajemen data yang komprehensif.",
+      "details": {
+        "0": "Menunjukkan kemampuan belajar tangkas dengan menerjemahkan konsep teoritis dari pelatihan React menjadi aplikasi nyata, membuktikan kemampuan untuk mengadopsi dan menerapkan teknologi baru secara efektif dalam waktu singkat.",
+        "1": "Merancang dan mengesekusi arsitektur data yang logis dengan fungsionalitas CRUD (Create, Read, Update, Delete) penuh, serta mengimplementasikan fitur pencarian dan penyortiran dinamis untuk menciptakan pengalaman manajemen data yang user-centric.",
+        "2": "Mengoptimalkan manajemen state aplikasi dan lifecycle komponen menggunakan React Hooks (useState, useEffect), menghasilkan arsitektur komponen yang bersih, efisien, dan modern."
+      }
+    },
+    "proj-4": {
+      "title": "Loco Booking Management API – Sistem Reservasi Skala Tim",
+      "description": "REST API yang robust dan skalabel untuk sistem reservasi kereta api, menangani logika inti dari pemesanan hingga otentikasi. Proyek ini merupakan hasil kolaborasi tim yang intensif selama 40 hari, fokus pada keandalan dan keamanan.",
+      "details": {
+        "0": "Berkontribusi aktif dalam siklus hidup pengembangan proyek tim, mulai dari fase desain arsitektur sistem, pembagian tugas, hingga integrasi kode, memastikan kolaborasi yang efektif dan pencapaian target proyek tepat waktu.",
+        "1": "Mengambil peran kunci dalam implementasi keamanan dengan merancang dan mengintegrasikan Spring Security untuk otentikasi dan otorisasi berbasis peran, mengamankan endpoint API dari akses tidak sah dan memastikan integritas data.",
+        "2": "Meningkatkan nilai fungsional sistem dengan mengembangkan fitur-fitur penting seperti notifikasi email otomatis untuk konfirmasi pesanan dan penjadwalan tugas (cron jobs) untuk proses latar belakang, menunjukkan pemahaman akan automasi dan efisiensi operasional."
+      }
+    },
+    "proj-5": {
+      "title": "Loan Management API – Solusi Finansial End-to-End",
+      "description": "REST API yang dikembangkan secara mandiri, dirancang untuk menangani seluruh siklus hidup manajemen pinjaman. Proyek ini menunjukkan kemampuan untuk menerjemahkan persyaratan bisnis finansial yang kompleks menjadi layanan API yang fungsional dan terstruktur dalam 7 hari.",
+      "details": {
+        "0": "Menunjukkan disiplin tinggi, manajemen proyek mandiri, dan kemampuan eksekusi cepat dengan menyelesaikan pengembangan API dari konsep hingga implementasi penuh secara otonom dalam satu minggu.",
+        "1": "Membangun endpoint API yang powerful dengan menerjemahkan logika bisnis finansial yang kompleks—termasuk kalkulasi angsuran dinamis, validasi kelayakan pinjaman, dan pelacakan riwayat pembayaran—ke dalam kode yang efisien.",
+        "2": "Mengimplementasikan fungsionalitas CRUD yang komprehensif sebagai fondasi data yang solid dan terstruktur untuk entitas nasabah, pinjaman, dan pembayaran, memastikan integritas dan kemudahan pengelolaan data."
+      }
+    },
+    "proj-6": {
+      "title": "Bumi Ama – Solusi Reservasi Full-Stack dengan Kontrol Akses",
+      "description": "Solusi reservasi end-to-end yang dikembangkan dalam 15 hari, mencakup sisi frontend dan backend. Aplikasi ini dirancang dengan arsitektur keamanan yang memisahkan hak akses secara tegas antara pengguna biasa dan administrator.",
+      "details": {
+        "0": "Mendemonstrasikan kapabilitas full-stack dengan mengelola seluruh siklus pengembangan, mulai dari desain antarmuka pengguna hingga logika server dan manajemen database, dalam lingkungan pengembangan yang berorientasi pada hasil cepat.",
+        "1": "Merancang dan mengimplementasikan sistem Role-Based Access Control (RBAC) yang efektif, di mana admin memiliki kontrol penuh atas data krusial, untuk menjamin keamanan data dan memberikan pengalaman pengguna yang sesuai dengan perannya."
+      }
+    },
+    "proj-7": {
+      "title": "Celestial Nexus – Visualisasi Data Astronomi",
+      "description": "Sebuah portal web yang mengubah data saintifik mentah dari NASA menjadi pengalaman visual yang menarik dan edukatif. Proyek ini menonjolkan kemampuan dalam integrasi API pihak ketiga dan penyajian data yang kompleks secara intuitif.",
+      "details": {
+        "0": "Secara proaktif mempelajari dokumentasi teknis dan mengorkestrasi integrasi dengan API eksternal NASA, menunjukkan kemampuan adaptasi yang cepat terhadap teknologi baru dan kemampuan untuk bekerja dengan sumber data eksternal.",
+        "1": "Merancang antarmuka yang tidak hanya menampilkan data, tetapi juga menceritakan sebuah kisah, dengan fokus pada User Experience (UX) untuk memastikan informasi astronomi yang kompleks dapat dinikmati dan dipahami oleh audiens umum."
+      }
+    },
+    "proj-8": {
+      "title": "Aroma POS – Sistem Kasir Berbasis CLI di C",
+      "description": "Aplikasi Point-of-Sale yang efisien dan ringan, dibangun dari dasar menggunakan bahasa C. Proyek ini mendemonstrasikan pemahaman fundamental ilmu komputer, manajemen memori, dan pembuatan aplikasi performa tinggi tanpa ketergantungan pada framework.",
+      "details": {
+        "0": "Mendemonstrasikan keahlian dalam C dengan merancang struktur data kustom (`struct`) dan mengelola data persisten melalui operasi file I/O, memastikan data transaksi dan inventaris tersimpan dengan aman dan dapat diakses kembali.",
+        "1": "Membangun solusi yang efisien dengan antarmuka command-line yang terstruktur, fokus pada performa, penggunaan sumber daya yang minimal, dan interaksi pengguna yang jelas melalui validasi input yang cermat."
+      }
+    }
+  },
+  "projectDetail": {
+    "notFound": "Proyek tidak ditemukan",
+    "backButton": "Kembali ke Semua Proyek",
+    "techLabel": "Teknologi",
+    "yearLabel": "Tahun",
+    "linksLabel": "Tautan",
+    "demoLink": "Demo",
+    "repoLink": "Repositori",
+    "descLabel": "Deskripsi"
+  }
 }

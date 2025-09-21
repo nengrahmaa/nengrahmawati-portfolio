@@ -10,6 +10,8 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Contact from './pages/Contact.jsx';
+import Certificates from './pages/Certificate.jsx';
+import ProjectDetail from './pages/ProjectDetail.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +20,10 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/projects", element: <Projects /> },
+      { path: "/projects/:projectId", element: <ProjectDetail /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/certificate", element: <Certificates /> },
+
     ],
   },
 ]);

@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Sidebar from "../component/sidebar";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Home() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const roles = [
     t("roles.juniorWebDev"),
@@ -218,7 +219,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* ABOUT SECTION */}
       <motion.section
         ref={(el) => (sectionsRef.current[1] = el)}
@@ -257,7 +258,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-white drop-shadow-lg z-10 text-left md:hidden"
+              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-gray-50 drop-shadow-lg z-10 text-left md:hidden"
             >
               {t("about.title")}
               <motion.span
@@ -317,6 +318,7 @@ export default function Home() {
 
             {/* Tombol */}
             <motion.button
+              onClick={() => navigate("/about")}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -353,7 +355,7 @@ export default function Home() {
             className="w-full md:w-1/2 relative"
           >
             <img
-              src="photo-hero.jpg"
+              src="project-grid.png"
               alt={t("alt.projects")}
               className="w-full h-[50vh] md:h-[70vh] object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition duration-500"
             />
@@ -364,7 +366,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-white drop-shadow-lg z-10 text-left md:hidden"
+              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-gray-900 drop-shadow-lg z-10 text-left md:hidden"
             >
               {t("project.title")}
               <motion.span
@@ -384,9 +386,7 @@ export default function Home() {
             </motion.h2>
           </motion.div>
 
-          {/* Konten Project */}
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            {/* Judul untuk tablet/laptop (di atas deskripsi) */}
             <motion.h2
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -424,6 +424,7 @@ export default function Home() {
 
             {/* Tombol */}
             <motion.button
+              onClick={() => navigate("/projects")}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -459,7 +460,7 @@ export default function Home() {
             className="w-full md:w-1/2 relative"
           >
             <img
-              src="photo-hero.jpg"
+              src="certif-grid.png"
               alt={t("alt.certificate")}
               className="w-full h-[50vh] md:h-[70vh] object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition duration-500"
             />
@@ -470,7 +471,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-white drop-shadow-lg z-10 text-left md:hidden"
+              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-2xl sm:text-3xl font-extrabold text-gray-900 drop-shadow-lg z-10 text-left md:hidden"
             >
               {t("certificate.title")}
               <motion.span
@@ -529,6 +530,7 @@ export default function Home() {
 
             {/* Tombol */}
             <motion.button
+              onClick={() => navigate("/certificate")}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -544,7 +546,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* CONTACT SECTION */}
       <motion.section
         ref={(el) => (sectionsRef.current[4] = el)}
         id="contact"
