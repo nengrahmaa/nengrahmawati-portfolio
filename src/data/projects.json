@@ -18,8 +18,8 @@
     "details_key": "projects.proj-4.details",
     "techStack": ["Java", "Spring Boot", "Spring Security", "JPA", "MySQL", "Swagger"],
     "demoUrl": "",
-    "githubUrl": "#",
-    "image": "/projects/trip-mate-project.png"
+    "githubUrl": "https://github.com/Wannzh/LocoBooking.git",
+    "image": "/projects/loco-booking.png"
   },
   {
     "id": "proj-5",
@@ -30,7 +30,7 @@
     "techStack": ["Java", "Spring Boot", "JPA", "MySQL", "REST API", "Swagger"],
     "demoUrl": "",
     "githubUrl": "https://github.com/nengrahmaa/loan-management-api.git",
-    "image": "/projects/trip-mate-project.png"
+    "image": "/projects/loan-management.png"
   },
   {
     "id": "proj-6",
@@ -40,8 +40,8 @@
     "details_key": "projects.proj-6.details",
     "techStack": ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap"],
     "demoUrl": "",
-    "githubUrl": "",
-    "image": "/projects/trip-mate-project.png"
+    "githubUrl": "https://github.com/nengrahmaa/bumi-ama.git",
+    "image": "/projects/bumiama.png"
   },
   {
     "id": "proj-7",
@@ -52,7 +52,7 @@
     "techStack": ["HTML5", "CSS3", "JavaScript", "NASA API"],
     "demoUrl": "https://celestial-nexus-nasa-api-uas-web.vercel.app/",
     "githubUrl": "https://github.com/nengrahmaa/celestial-nexus-nasa-api-uas.git",
-    "image": "/projects/trip-mate-project.png"
+    "image": "/projects/celestial-nexus.png"
   },
     {
     "id": "proj-8",
@@ -63,6 +63,6 @@
     "techStack": ["C"],
     "demoUrl": "",
     "githubUrl": "https://github.com/nengrahmaa/uas-c-sales-project.git",
-    "image": "/projects/trip-mate-project.png"
+    "image": "/projects/aroma-pos.png"
   }
 ]

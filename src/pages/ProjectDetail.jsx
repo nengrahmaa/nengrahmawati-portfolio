@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import projects from "../data/projects.json";
-import { ArrowLeft, ExternalLink, Github, CheckCircle } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, CheckCircle, Ban } from "lucide-react";
 import Footer from "../component/footer";
 
 export default function ProjectDetail() {
@@ -32,7 +32,7 @@ export default function ProjectDetail() {
         </div>
 
         <div className="w-full h-[30vh] md:h-[50vh] overflow-hidden">
-          <img src={project.image} alt={t(project.title_key)} className="w-full h-full object-cover"/>
+          <img src={project.image} alt={t(project.title_key)} className="w-full h-full object-cover" />
         </div>
 
         <section className="px-6 md:px-16 lg:px-24 py-16 text-gray-800">
@@ -40,7 +40,7 @@ export default function ProjectDetail() {
             <aside className="lg:col-span-1">
               <div className="sticky top-24">
                 <h1 className="text-4xl font-bold text-gray-900">{t(project.title_key)}</h1>
-                
+
                 <h4 className="font-semibold text-gray-500 mt-8 mb-2 tracking-widest uppercase text-sm">{t("projectDetail.techLabel")}</h4> {/* <-- Diubah */}
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map(tech => (
@@ -53,11 +53,23 @@ export default function ProjectDetail() {
 
                 <h4 className="font-semibold text-gray-500 mt-6 mb-3 tracking-widest uppercase text-sm">{t("projectDetail.linksLabel")}</h4> {/* <-- Diubah */}
                 <div className="flex space-x-4 items-center">
-                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    <ExternalLink size={18}/> {t("projectDetail.demoLink")} {/* <-- Diubah */}
-                  </a>
+                  {project.demoUrl ? (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    >
+                      <ExternalLink size={18} /> {t("projectDetail.demoLink")}
+                    </a>
+                  ) : (
+                    <span className="flex items-center gap-2 text-gray-400 cursor-not-allowed font-medium">
+                      <Ban size={18} /> {t("projectDetail.demoLink")}
+                    </span>
+                  )}
+
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                    <Github size={18}/> {t("projectDetail.repoLink")} {/* <-- Diubah */}
+                    <Github size={18} /> {t("projectDetail.repoLink")} {/* <-- Diubah */}
                   </a>
                 </div>
               </div>
@@ -66,11 +78,11 @@ export default function ProjectDetail() {
             <main className="lg:col-span-2">
               <h4 className="font-semibold text-gray-500 mb-2 tracking-widest uppercase text-sm">{t("projectDetail.descLabel")}</h4> {/* <-- Diubah */}
               <p className="text-gray-700 text-lg leading-relaxed mb-8">{t(project.description_key)}</p>
-              
+
               <ul className="space-y-4">
                 {detailsArray.map((detail, index) => (
-                  <motion.li 
-                    key={index} 
+                  <motion.li
+                    key={index}
                     className="flex items-start"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
