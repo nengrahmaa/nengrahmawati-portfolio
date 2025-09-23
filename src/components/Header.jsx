@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, Code2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";

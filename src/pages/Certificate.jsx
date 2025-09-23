@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import {} from "framer-motion";
 import certificates from "../data/certificates.json";
 import CertificateCard from "../components/CertificateCard";
 import CertificateModal from "../components/CertificateModal";
