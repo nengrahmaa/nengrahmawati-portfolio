@@ -6,8 +6,8 @@ import {motion} from "framer-motion";
 import certificates from "../data/certificates.json";
 import CertificateCard from "../components/CertificateCard";
 import CertificateModal from "../components/CertificateModal";
-import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
 
 const containerVariants = {
     hidden: {},
