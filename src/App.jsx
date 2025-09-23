@@ -1,7 +1,7 @@
 import './App.css'
 import {Outlet } from "react-router-dom";
-import Header from './component/Header';
-import ScrollToTop from './component/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
+import Header from './components/Header.jsx';
 
 function App() {
 

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import Sidebar from "../component/sidebar";
+import Sidebar from "../components/sidebar";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Home() {

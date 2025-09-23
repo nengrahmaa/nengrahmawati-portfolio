@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import projects from "../data/projects.json";
-import ProjectCard from "../component/ProjectCard"; // <-- Pastikan menggunakan ProjectCard
-import Footer from "../component/footer";
-import BackToTop from "../component/BackToTop";
+import ProjectCard from "../components/ProjectCard"; // <-- Pastikan menggunakan ProjectCard
+import Footer from "../components/footer";
+import BackToTop from "../components/BackToTop";
 
 const containerVariants = {
   hidden: {},

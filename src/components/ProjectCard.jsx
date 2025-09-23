@@ -21,22 +21,22 @@ export default function ProjectCard({ project }) {
                 to={`/projects/${project.id}`}
                 className="group relative block h-80 w-full rounded-xl overflow-hidden shadow-2xl"
             >
+                {/* 1. Gambar dimulai dalam keadaan zoom (scale-105) dan kembali normal saat hover */}
                 <img
                     src={project.image}
                     alt={t(project.title_key)}
-                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-500 ease-in-out scale-105 group-hover:scale-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+                {/* 2. Gradient terlihat di awal dan menghilang saat hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
-                {/* 1. Tambahkan "overflow-hidden" agar konten yang bergeser tidak keluar dari padding */}
                 <div className="relative h-full flex flex-col justify-end p-6 text-white overflow-hidden">
-                    {/* Tahun tetap terlihat */}
                     <span className="absolute top-4 left-4 text-sm font-semibold bg-black/50 px-3 py-1 rounded-full">{project.year}</span>
 
-                    {/* 2. Buat wrapper untuk semua konten yang akan muncul */}
-                    <div className="opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                    {/* 3. Wrapper konten sekarang terlihat di awal dan menghilang saat hover */}
+                    <div className="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-8">
 
-                        <h3 className="text-3xl font-bold transition-colors duration-300 group-hover:text-white">
+                        <h3 className="text-3xl font-bold">
                             {t(project.title_key)}
                         </h3>
 
@@ -44,10 +44,7 @@ export default function ProjectCard({ project }) {
                             {t(project.description_key)}
                         </p>
 
-                        {/* Wrapper untuk bagian bawah kartu */}
                         <div className="mt-4 pt-4 border-t border-white/20 flex justify-between items-end">
-
-                            {/* Bagian Kiri: Tech Stack */}
                             <div className="flex flex-wrap gap-2">
                                 {project.techStack.map(tech => (
                                     <span key={tech} className="text-xs bg-white/10 backdrop-blur-sm text-white px-3 py-1 rounded-full">
@@ -56,10 +53,7 @@ export default function ProjectCard({ project }) {
                                 ))}
                             </div>
 
-                            {/* Bagian Kanan: Ikon Link Demo & GitHub */}
                             <div className="flex items-center gap-3 flex-shrink-0">
-
-                                {/* Tampilkan ikon ini HANYA jika project.demoUrl ada */}
                                 {project.demoUrl && (
                                     <a
                                         href={project.demoUrl}
@@ -72,8 +66,6 @@ export default function ProjectCard({ project }) {
                                         <ExternalLink size={20} />
                                     </a>
                                 )}
-
-                                {/* Ikon GitHub tetap tampil seperti biasa */}
                                 <a
                                     href={project.githubUrl}
                                     target="_blank"
@@ -85,7 +77,6 @@ export default function ProjectCard({ project }) {
                                     <Github size={20} />
                                 </a>
                             </div>
-
                         </div>
                     </div>
                 </div>

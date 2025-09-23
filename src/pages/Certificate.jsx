@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import certificates from "../data/certificates.json";
-import CertificateCard from "../component/CertificateCard";
-import CertificateModal from "../component/CertificateModal";
-import Footer from "../component/footer";
-import BackToTop from "../component/BackToTop";
+import CertificateCard from "../components/CertificateCard";
+import CertificateModal from "../components/CertificateModal";
+import Footer from "../components/footer";
+import BackToTop from "../components/BackToTop";
 
 const containerVariants = {
     hidden: {},

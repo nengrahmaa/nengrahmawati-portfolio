@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import Footer from "../component/footer";
-import BackToTop from "../component/BackToTop";
+import Footer from "../components/footer";
+import BackToTop from "../components/BackToTop";
 
 export default function Contact() {
   const { t } = useTranslation();
