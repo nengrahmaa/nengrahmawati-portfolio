@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation } from "react-router-dom";
 import BackToTop from "../components/BackToTop";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 // Ini bisa ditaruh di atas komponen kalau belum ada
 

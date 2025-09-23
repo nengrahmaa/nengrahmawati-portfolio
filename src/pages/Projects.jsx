@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import projects from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard"; // <-- Pastikan menggunakan ProjectCard
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 
 const containerVariants = {

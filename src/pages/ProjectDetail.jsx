@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import projects from "../data/projects.json";
 import { ArrowLeft, ExternalLink, Github, CheckCircle, Ban } from "lucide-react";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 export default function ProjectDetail() {
   const { projectId } = useParams();

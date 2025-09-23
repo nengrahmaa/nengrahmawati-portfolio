@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 
 export default function Contact() {
