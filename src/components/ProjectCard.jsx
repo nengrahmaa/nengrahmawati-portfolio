@@ -19,34 +19,34 @@ export default function ProjectCard({ project }) {
         <motion.div variants={cardVariants}>
             <Link
                 to={`/projects/${project.id}`}
-                className="group relative block h-80 w-full rounded-xl overflow-hidden shadow-2xl"
+                className="group relative block h-72 md:h-80 w-full rounded-xl overflow-hidden shadow-2xl"
             >
-                {/* 1. Gambar dimulai dalam keadaan zoom (scale-105) dan kembali normal saat hover */}
                 <img
                     src={project.image}
                     alt={t(project.title_key)}
                     className="absolute inset-0 h-full w-full object-contain transition-transform duration-500 ease-in-out scale-105 group-hover:scale-100"
                 />
-                {/* 2. Gradient terlihat di awal dan menghilang saat hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
-                <div className="relative h-full flex flex-col justify-end p-6 text-white overflow-hidden">
-                    <span className="absolute top-4 left-4 text-sm font-semibold bg-black/50 px-3 py-1 rounded-full">{project.year}</span>
+                <div className="relative h-full flex flex-col justify-end p-4 md:p-6 text-white overflow-hidden">
+                    {/* TIPOGRAFI: Label tahun dibuat sedikit lebih besar di layar tablet ke atas */}
+                    <span className="absolute top-4 left-4 text-xs sm:text-sm font-semibold bg-black/50 px-3 py-1 rounded-full">{project.year}</span>
 
-                    {/* 3. Wrapper konten sekarang terlihat di awal dan menghilang saat hover */}
                     <div className="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-8">
-
-                        <h3 className="text-3xl font-bold">
+                        {/* TIPOGRAFI UTAMA: Ukuran judul diskalakan secara bertahap untuk setiap breakpoint */}
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">
                             {t(project.title_key)}
                         </h3>
 
-                        <p className="mt-2 text-gray-300 text-sm leading-relaxed line-clamp-2">
+                        {/* TIPOGRAFI: Jarak (margin) & panjang teks deskripsi disesuaikan */}
+                        <p className="mt-1 sm:mt-2 text-sm text-gray-300 leading-relaxed line-clamp-1 sm:line-clamp-2">
                             {t(project.description_key)}
                         </p>
 
-                        <div className="mt-4 pt-4 border-t border-white/20 flex justify-between items-end">
+                        <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-white/20 flex flex-col items-start gap-3 sm:flex-row sm:justify-between sm:items-end">
                             <div className="flex flex-wrap gap-2">
                                 {project.techStack.map(tech => (
+                                    // TIPOGRAFI: Ukuran font untuk label teknologi dijaga tetap kecil (text-xs) agar tidak terlalu ramai
                                     <span key={tech} className="text-xs bg-white/10 backdrop-blur-sm text-white px-3 py-1 rounded-full">
                                         {tech}
                                     </span>
@@ -55,25 +55,11 @@ export default function ProjectCard({ project }) {
 
                             <div className="flex items-center gap-3 flex-shrink-0">
                                 {project.demoUrl && (
-                                    <a
-                                        href={project.demoUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
-                                        className="text-gray-300 hover:text-white transition-colors z-10"
-                                        aria-label="Live Demo"
-                                    >
+                                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-gray-300 hover:text-white transition-colors z-10" aria-label="Live Demo">
                                         <ExternalLink size={20} />
                                     </a>
                                 )}
-                                <a
-                                    href={project.githubUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="text-gray-300 hover:text-white transition-colors z-10"
-                                    aria-label="GitHub Repository"
-                                >
+                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-gray-300 hover:text-white transition-colors z-10" aria-label="GitHub Repository">
                                     <Github size={20} />
                                 </a>
                             </div>

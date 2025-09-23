@@ -139,7 +139,7 @@ const wordVariant = {
               viewport={{ once: true }}
             >
               <img
-                src="/photo-grid2.png"
+                src="/about/photo-1.jpg"
                 alt="Pendidikan 1"
                 className="w-full h-full object-cover shadow-md grayscale hover:grayscale-0 transition-all duration-300 ease"
               />
@@ -154,7 +154,7 @@ const wordVariant = {
               viewport={{ once: true }}
             >
               <img
-                src="/photo-grid.png"
+                src="/about/photo-2.jpg"
                 alt="Pendidikan 2"
                 className="w-full h-full object-cover shadow-md grayscale hover:grayscale-0 transition-all duration-300 ease"
               />
@@ -169,7 +169,7 @@ const wordVariant = {
               viewport={{ once: true }}
             >
               <img
-                src="/photo-hero.jpg"
+                src="/about/photo-3.png"
                 alt="Pendidikan 3"
                 className="w-full h-full object-cover shadow-md grayscale hover:grayscale-0 transition-all duration-300 ease"
               />

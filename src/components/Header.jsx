@@ -19,7 +19,6 @@ export default function Header() {
   };
 
   return (
-    // Gunakan React Fragment untuk membungkus header dan menu mobile
     <>
       <motion.header
         className="fixed top-0 left-0 w-full backdrop-blur-md z-50 bg-white/60 dark:bg-gray-900/60 shadow-sm"
@@ -138,18 +137,6 @@ export default function Header() {
                 </button>
                 <button
                   onClick={() => {
-                    navigate("/explore");
-                    setMenuOpen(false);
-                  }}
-                  className={`pb-1 ${isActive("/explore")
-                    ? "border-b-2 border-gray-500 text-gray-500"
-                    : "hover:text-gray-600 dark:hover:text-gray-400"
-                    }`}
-                >
-                  {t("header.explore")}
-                </button>
-                <button
-                  onClick={() => {
                     navigate("/about");
                     setMenuOpen(false);
                   }}
@@ -162,15 +149,27 @@ export default function Header() {
                 </button>
                 <button
                   onClick={() => {
-                    navigate("/project");
+                    navigate("/projects");
                     setMenuOpen(false);
                   }}
-                  className={`pb-1 ${isActive("/project")
+                  className={`pb-1 ${isActive("/projects")
                     ? "border-b-2 border-gray-500 text-gray-500"
                     : "hover:text-gray-600 dark:hover:text-gray-400"
                     }`}
                 >
                   {t("header.project")}
+                </button>
+                <button
+                  onClick={() => {
+                    navigate("/certificate");
+                    setMenuOpen(false);
+                  }}
+                  className={`pb-1 ${isActive("/certificate")
+                    ? "border-b-2 border-gray-500 text-gray-500"
+                    : "hover:text-gray-600 dark:hover:text-gray-400"
+                    }`}
+                >
+                  {t("header.sertif")}
                 </button>
                 <button
                   onClick={() => {

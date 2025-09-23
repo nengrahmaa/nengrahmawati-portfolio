@@ -24,8 +24,8 @@ export default function Home() {
 
   const handleDownload = (version) => {
     const fileMap = {
-      id: "/cv-indo.pdf",
-      en: "/cv-english.pdf",
+      id: "/cv/CV-Indo.pdf",
+      en: "/cv/CV-English.pdf",
     };
     const link = document.createElement("a");
     link.href = fileMap[version];
@@ -35,7 +35,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Set initial state based on window width
     setIsDesktop(window.innerWidth >= 768);
 
     const handleResize = () => {
