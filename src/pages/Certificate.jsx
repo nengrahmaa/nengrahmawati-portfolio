@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import certificates from "../data/certificates.json";
+import {motion} from "framer-motion";
 import CertificateCard from "../components/CertificateCard";
 import CertificateModal from "../components/CertificateModal";
-import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
 
 const containerVariants = {
     hidden: {},
